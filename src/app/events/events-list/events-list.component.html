@@ -1,6 +1,8 @@
 <div>
   <h1>Upgrading Angular Events</h1>
   <hr>
-  <app-event-thumbnail (eventClick)='handleEventClicked($event)'
-  [event]='event1'></app-event-thumbnail>
+  <!-- Template reference variable using reference thumbnail -->
+  <app-event-thumbnail #thumbnail [event]='event1'></app-event-thumbnail>
+  <h3>{{thumbnail.someName}}</h3>
+  <button class='btn btn-primary' (click)='thumbnail.logFoo()'>log me </button>
 </div>

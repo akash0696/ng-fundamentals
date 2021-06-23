@@ -1,5 +1,4 @@
-
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 
 
@@ -11,12 +10,14 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 export class EventThumbnailComponent implements OnInit {
 
   @Input() event: any;
-  @Output() eventClick = new EventEmitter();
+  // Template reference variable from child to parent
+  someName: any = 'AKash';
   constructor() { }
-
-  handleClickMe(): void{
-    this.eventClick.emit(this.event.name);
+  // Template reference variable from parent to child
+  logFoo(): void{
+    console.log('Hello foo');
   }
+
   ngOnInit(): void {
   }
 
