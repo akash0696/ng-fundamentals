@@ -8,3 +8,20 @@
 .well div{
   color: #bbb;
 }
+
+/* for ngClass */
+.green{
+  color: rgb(5, 65, 5) !important;
+}
+
+.blue{
+  color: rgb(5, 5, 63) !important;
+}
+
+.red{
+  color: rgb(78, 6, 6) !important;
+}
+
+.bold{
+  font-weight: bold;
+}
