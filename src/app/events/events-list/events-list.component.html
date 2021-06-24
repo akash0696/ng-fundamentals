@@ -1,5 +1,9 @@
 <div>
   <h1>Upgrading Angular Events</h1>
   <hr>
-  <app-event-thumbnail [event]='event1'></app-event-thumbnail>
+  <div class="row">
+    <div *ngFor= "let details of events" class="col-md-5">
+      <app-event-thumbnail [event]='details'></app-event-thumbnail>
+    </div>
+  </div>
 </div>
