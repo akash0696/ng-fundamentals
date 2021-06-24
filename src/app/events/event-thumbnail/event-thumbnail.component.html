@@ -9,7 +9,8 @@
     <span class="pad-left" *ngSwitchCase='"10:00 am"'>(Late start)</span>
     <span class="pad-left" *ngSwitchDefault>(Normal start)</span>
   </div>
-  <div>Price: ${{event?.price}}</div>
+  <!-- ngStyle -->
+  <div [ngStyle]='getStartPriceStyle()'>Price: ${{event?.price}}</div>
   <!-- ngIf -->
   <div *ngIf='event?.location'>
     <span>Location: {{event?.location?.address}}</span>

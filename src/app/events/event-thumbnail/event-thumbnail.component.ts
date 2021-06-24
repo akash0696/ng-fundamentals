@@ -20,6 +20,16 @@ export class EventThumbnailComponent implements OnInit {
     }
     return['red', 'bold'];
   }
+
+  // ngSwitch condition
+  getStartPriceStyle(): any{
+    if (this.event && this.event.price < 780) {
+      return {color : '#8e5dc2', 'font-weight': 'bold'};
+    }
+    return {color : '#9ea53b', 'font-weight': 'bold'};
+  }
+
+
   ngOnInit(): void {
   }
 
