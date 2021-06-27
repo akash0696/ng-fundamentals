@@ -10,6 +10,7 @@ export class EventService {
     return events;
   }
 }
+// injecting events through service
 const events = [
   {
     id: 1,
