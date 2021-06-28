@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class CreateEventComponent implements OnInit {
 
   constructor(private router: Router) { }
-  cancel(){
+  cancel(): void{
     this.router.navigate(['/events']);
   }
 
