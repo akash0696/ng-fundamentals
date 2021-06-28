@@ -6,8 +6,13 @@ import { Injectable } from '@angular/core';
 export class EventService {
 
   constructor() { }
+
   getEvents(): any[]{
     return events;
+  }
+
+  getEvent(id: number){
+    return events.find(event => event.id === id);
   }
 }
 // injecting events through service
