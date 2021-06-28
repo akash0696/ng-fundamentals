@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -28,7 +28,22 @@ import { EventRouteActivatorGuard } from './events/guard/event-route-activator.g
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [EventService, ToastrService, EventRouteActivatorGuard],
+  providers: [
+    EventService,
+    ToastrService,
+    EventRouteActivatorGuard,
+    {
+      provide: 'canDeactivateCreateEvent',
+      useValue: checkDirtyState
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function checkDirtyState(component: CreateEventComponent): boolean{
+  if (component.isDirty){
+    return window.confirm('You have not saved this event, do you really want to cancel?')
+  }
+  return true;
+}
