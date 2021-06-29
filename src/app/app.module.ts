@@ -23,7 +23,7 @@ import { EventListResolver } from './events/events-list-resolver.service';
     NavbarComponent,
     EventDetailsComponent,
     CreateEventComponent,
-    Error404Component
+    Error404Component,
   ],
   imports: [
     BrowserModule,
