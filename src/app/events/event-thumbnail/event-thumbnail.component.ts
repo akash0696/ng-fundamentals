@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { IEvent } from '../shared/event.model';
 
 
 
@@ -9,7 +10,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class EventThumbnailComponent implements OnInit {
 
-  @Input() event: any;
+  @Input() event: IEvent | undefined;
   // ngClass condition
   getStartTimeClass(): string[]{
     if (this.event && this.event.time === '8:00 am') {
