@@ -10,7 +10,8 @@ import { IEvent } from '../shared/event.model';
 })
 export class EventThumbnailComponent implements OnInit {
 
-  @Input() event: IEvent | undefined;
+  @Input()
+  event!: IEvent;
   // ngClass condition
   getStartTimeClass(): string[]{
     if (this.event && this.event.time === '8:00 am') {
