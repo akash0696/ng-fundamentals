@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
 
   login(formValues: any): void{
     this.authService.loginUser(formValues.userName, formValues.password);
-    this.router.navigate(['events']);
+    this.router.navigate(['/user/profile']);
   }
 
   cancel(): void{
