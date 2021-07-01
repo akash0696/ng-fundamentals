@@ -21,6 +21,12 @@ export class EventService {
   getEvent(id: number): IEvent | undefined{
     return events.find(event => event.id === id);
   }
+
+  saveEvent(event: any): void{
+    event.id = 999;
+    event.session = [];
+    events.push(event);
+  }
 }
 // injecting events through service
 const events: IEvent[] = [
